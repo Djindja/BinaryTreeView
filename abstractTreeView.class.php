@@ -20,6 +20,6 @@ abstract class abstractTreeView {
 	}
 
 	abstract public function showCompleteTree();	 
-	abstract public function showAjaxTree();
+	abstract public function showAjaxTree(string $lang);
 	abstract public function fetchAjaxTreeNode($entry_id);
 }

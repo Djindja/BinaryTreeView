@@ -58,19 +58,21 @@ class myTreeView extends abstractTreeView {
             return $row['name'];
         }
 		
-        public function showAjaxTree()
+        public function showAjaxTree(string $lang)
         {
 			$data = [];
 
-            $sql = "SELECT * FROM tree_entry";
+            $sql = "SELECT tree_entry.entry_id as entry_id, tree_entry.parent_entry_id as parent_id, tree_entry_lang.name as text FROM tree_entry LEFT JOIN tree_entry_lang on tree_entry.entry_id = tree_entry_lang.entry_id";
             $res = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
            
             while( $row = mysqli_fetch_assoc($res) ) { 
                 $tmp = array();
                 $tmp['id'] = $row['entry_id'];
-                $tmp['parent_id'] = $row['parent_entry_id'];
+                $tmp['parent_id'] = $row['parent_id'];
+                $tmp['text'] = $row['text'];
                 array_push($data, $tmp); 
             }
+
             $itemsByReference = array();
             
             // Build array of item references:

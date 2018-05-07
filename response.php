@@ -12,4 +12,4 @@ require('abstractTreeView.class.php');
 require('myTreeView.class.php');
 
 $treeView = new myTreeView();
-echo $treeView->showAjaxTree();
+echo $treeView->showAjaxTree('eng');
