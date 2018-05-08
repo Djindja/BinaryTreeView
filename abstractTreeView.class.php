@@ -19,8 +19,7 @@ abstract class abstractTreeView {
 
 	}
 
-	abstract public function showCompleteTree(); 
-	abstract public function createTreeView($data, $currentParent, $currLevel = 0, $prevLevel = -1); 
+	abstract public function showCompleteTree($data, $currentParent, $currLevel = 0, $prevLevel = -1); 
 	abstract public function showAjaxTree(string $lang);
 	abstract public function fetchAjaxTreeNode($entry_id);
 }

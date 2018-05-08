@@ -13,23 +13,22 @@
    <h2 align="center">Treeview AJAX</h2>
    <br /><br />
    <div id="treeview">
-    
    </div>
   </div>
  </body>
 </html>
 
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function() {
     $.ajax({
-   type: "GET",  
-   url: "response.php?lang=ger",
-   dataType: "json",       
-   success: function(response)  
-   {
-     console.log(response);
-    $('#treeview').treeview({data: response});
-   }   
- });
+      type: "GET",  
+      url: "response.php",
+      dataType: "json",       
+      success: function(response)  
+      {
+        $('#treeview').treeview({data: response});
+        $('#treeview').treeview('collapseAll', { silent: true });
+      }   
+    });
 });
 </script>
