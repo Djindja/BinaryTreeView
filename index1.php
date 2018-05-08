@@ -23,7 +23,7 @@
 $(document).ready(function(){ 
     $.ajax({
    type: "GET",  
-   url: "response.php",
+   url: "response.php?lang=ger",
    dataType: "json",       
    success: function(response)  
    {

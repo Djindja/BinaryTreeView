@@ -30,7 +30,7 @@ $treeView = new myTreeView();
             <h2 align="center">Treeview</h2>
             <br /><br />
             <div id="treeview">
-                <?php $treeView->showCompleteTree(); ?>
+                <?php $treeView->createTreeView(0, 0); ?>
             </div>
         </div>
     </body>
