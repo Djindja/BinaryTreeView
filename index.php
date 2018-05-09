@@ -28,7 +28,7 @@ $treeView = new myTreeView();
         <br /><br />
         <div class="container" style="width:900px;">
             <h2 align="center">Treeview</h2>
-            <a href="http://test.develop/index1.php" class="btn btn-info">Link to Treeview AJAX</a>
+            <a href="/index1.php" class="btn btn-info">Link to Treeview AJAX</a>
             <br /><br />
             <div id="treeview">
                 <?php $treeView->showCompleteTree(0, 0); ?>
