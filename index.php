@@ -37,6 +37,3 @@ $treeView = new myTreeView();
 
     </body>
 </html>
-
-
-		
