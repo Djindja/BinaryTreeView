@@ -11,6 +11,7 @@
   <br /><br />
   <div class="container" style="width:900px;">
    <h2 align="center">Treeview AJAX</h2>
+   <a href="/" class="btn btn-info">Link to Treeview</a>
    <br /><br />
    <div id="treeview">
    </div>
