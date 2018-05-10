@@ -7,7 +7,7 @@
 
 class myTreeView extends abstractTreeView {
 
-    public function showCompleteTree($data, $currentParent, $currLevel = 0, $prevLevel = -1)
+    public function showCompleteTree($data, $currentParent)
     {
         if ($data === 0 ) {
             $data = [];
@@ -87,7 +87,7 @@ class myTreeView extends abstractTreeView {
             $tmp['id'] = $row['entry_id'];
             $tmp['parent_id'] = $row['parent_id'];
             $tmp['text'] = $row['text'];
-            
+
             if($tmp['text'] === null) {
                $tmp['text'] = $this->getTranslate($tmp['id'], "eng"); 
             }
