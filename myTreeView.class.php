@@ -31,16 +31,13 @@ class myTreeView extends abstractTreeView {
             $itemsByReference[$item['id']] = &$item;
         }
 
-        // Set items as children of the relevant parent item.
         foreach($data as $key => &$item) {
-        //echo "<pre>";print_r($itemsByReference[$item['parent_id']]);die;
             if($item['parent_id'] && isset($itemsByReference[$item['parent_id']])) {
                 $itemsByReference[$item['parent_id']]['nodes'][] = &$item;
             }
         }
 
         foreach($data as $key => &$item) {
-        //echo "<pre>";print_r($itemsByReference[$item['parent_id']]);die;
             if($item['parent_id'] && isset($itemsByReference[$item['parent_id']])) {
                 unset($data[$key]);
             }
@@ -52,7 +49,7 @@ class myTreeView extends abstractTreeView {
 
     private function draw($data, $currentParent)
     {
-        //die(var_dump($data));
+        
         foreach ($data as $key => &$item) {
             echo '<ol>';
             echo '<li>' . $item['text'] . '</li>';
@@ -90,6 +87,7 @@ class myTreeView extends abstractTreeView {
             $tmp['id'] = $row['entry_id'];
             $tmp['parent_id'] = $row['parent_id'];
             $tmp['text'] = $row['text'];
+            
             if($tmp['text'] === null) {
                $tmp['text'] = $this->getTranslate($tmp['id'], "eng"); 
             }
@@ -102,16 +100,13 @@ class myTreeView extends abstractTreeView {
             $itemsByReference[$item['id']] = &$item;
         }
 
-        // Set items as children of the relevant parent item.
         foreach($data as $key => &$item) {
-        //echo "<pre>";print_r($itemsByReference[$item['parent_id']]);die;
             if($item['parent_id'] && isset($itemsByReference[$item['parent_id']])) {
                 $itemsByReference[$item['parent_id']]['nodes'][] = &$item;
             }
         }
 
         foreach($data as $key => &$item) {
-        //echo "<pre>";print_r($itemsByReference[$item['parent_id']]);die;
             if($item['parent_id'] && isset($itemsByReference[$item['parent_id']])) {
                 unset($data[$key]);
             }
