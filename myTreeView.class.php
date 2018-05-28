@@ -21,8 +21,7 @@ class myTreeView extends abstractTreeView {
             $tmp['id'] = $row['entry_id'];
             $tmp['parent_id'] = $row['parent_id'];
             $tmp['text'] = $row['text'];
-            array_push($data, $tmp); 
-           
+            array_push($data, $tmp);
         }
 
          $itemsByReference = array();
